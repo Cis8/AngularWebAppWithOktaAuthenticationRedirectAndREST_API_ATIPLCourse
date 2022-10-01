@@ -42,12 +42,21 @@
 <br/>
 <br/>
 
+<div *ngIf="!(authStateService.authState$ | async).isAuthenticated && router.url === '/'" class="container p-2">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Welcome to ATIPL website</h5>
+      <p class="card-text">If you desire to log in, please go to the Login section.</p>
+      <p class="card-text">To access resources in the Protected section you must be logged in.</p>
+    </div>
+  </div>
+</div>
 <div *ngIf="(authStateService.authState$ | async).isAuthenticated && router.url === '/'" class="container p-2">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Welcome {{ userClaims?.name }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Email: {{ userClaims?.email }}</h6>
-      <p class="card-text">Region: {{ userClaims?.zoneinfo }}</p>
+      <h5 class="card-title">Welcome to ATIPL website {{ userClaims?.name }}</h5>
+      <p class="card-text">If you desire to log out, go to the Login section and press the Logout button.</p>
+      <p class="card-text">You can now access the resources under the Protected section.</p>
     </div>
   </div>
 </div>
