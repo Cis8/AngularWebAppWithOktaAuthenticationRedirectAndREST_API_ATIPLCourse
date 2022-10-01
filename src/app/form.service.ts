@@ -8,7 +8,7 @@ export class FormService {
 
   constructor(private httpClient: HttpClient) { }
 
-  GetResource(headers: HttpHeaders) {
-    return this.httpClient.get('/api/whoami', { headers })
+  GetResource(headers: HttpHeaders, resourceName: string) {
+    return this.httpClient.get('/api/' + resourceName, { headers })
   }
 }

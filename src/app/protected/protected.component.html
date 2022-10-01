@@ -1,7 +1,7 @@
-<form>
+<form #resourceForm="ngForm">
   <div class="form-group">
     <label for="inputResourceName">Desired resource</label>
-    <input type="text" class="form-control" id="resourceInput" aria-describedby="emailHelp" placeholder="Enter resource name">
+    <input type="text" class="form-control" id="resourceInput" aria-describedby="emailHelp" placeholder="Enter resource name" ngModel>
     <small id="resourceHelp" class="form-text text-muted">To access the resource you have to be authenticated. If you are not, you'll be redirected.</small>
   </div>
   <button id="submitButton" type="submit" (click)="GetResource()" class="btn btn-primary">Submit</button>
