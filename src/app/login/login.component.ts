@@ -12,7 +12,6 @@ import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 })
 export class LoginComponent {
 
-  //token: string | undefined = "";
   userClaims: UserClaims | undefined;
   constructor(
     @Inject(OKTA_AUTH) public oktaAuth: OktaAuth, protected authStateService: OktaAuthStateService) {
@@ -24,7 +23,6 @@ export class LoginComponent {
   async login() {
     await this.oktaAuth.signInWithRedirect().then(() => {
       this.oktaAuth.getAccessToken();
-      //console.log("Token: " + this.token);
     });
     
     
