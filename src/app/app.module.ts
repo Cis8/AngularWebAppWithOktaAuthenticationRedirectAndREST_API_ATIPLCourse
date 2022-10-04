@@ -16,8 +16,8 @@ import { OktaAuthGuard } from '@okta/okta-angular/public-api';
 import { BaseRouteReuseStrategy, RouteReuseStrategy } from '@angular/router';
 
 const config = {
-  issuer: 'https://dev-94483397.okta.com/oauth2/default',
-  clientId: '0oa68ril6auaQg0IC5d7',
+  issuer: 'https://dev-32340939.okta.com/oauth2/default',
+  clientId: '0oa6q1pc4olhRTTxa5d7',//'0oa68ril6auaQg0IC5d7',
   redirectUri: 'http://localhost:4200/login/callback'
   //redirectUri: window.location.origin + '/callback'
 }

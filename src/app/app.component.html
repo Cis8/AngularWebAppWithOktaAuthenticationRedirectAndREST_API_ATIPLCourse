@@ -30,7 +30,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a routerLink="/login" class="nav-link" href="#">Login</a>
+          <a routerLink="/login" class="nav-link" href="#" *ngIf="!(authStateService.authState$ | async).isAuthenticated">Login</a>
+          <a routerLink="/login" class="nav-link" href="#" *ngIf="(authStateService.authState$ | async).isAuthenticated">Logout</a>
           <li class="nav-item">
             <a routerLink="/protected" class="nav-link" href="#">Resources</a>
       </ul>
