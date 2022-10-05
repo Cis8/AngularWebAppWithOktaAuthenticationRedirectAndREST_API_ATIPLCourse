@@ -6,6 +6,10 @@ In the app.module.ts file change the ORG_NAME_HERE with your Okta organization's
 
 Change the CLIENT_ID_HERE with the application client ID. It can be found under Applications > Applications, right under your application (that was created using Pulumi).
 
+Ensure to have checked to have correctly setted up the following complementary projects:
+Okta setup with Pulumi: https://github.com/Cis8/PulumiOktaApplicationSetupATIPLCourse
+Express JS server: https://github.com/Cis8/ExpressOktaAuthServerATIPLCourseExam
+
 ## Organization and functionalities of the application
 There are three main components: AppComponent, LoginComponent, and ProtectedComponent.
 AppComponent is just the home page of the site. In the HTML file of the component, there is some text that will help the user understand where he is and what does he have to do.
